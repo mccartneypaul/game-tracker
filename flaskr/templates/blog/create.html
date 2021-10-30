@@ -5,11 +5,14 @@
 {% endblock %}
 
 {% block content %}
+  <p>Wow this is a new block!</p>
   <form method="post">
     <label for="title">Title</label>
     <input name="title" id="title" value="{{ request.form['title'] }}" required>
     <label for="body">Body</label>
     <textarea name="body" id="body">{{ request.form['body'] }}</textarea>
+    <label for="feeling">How do you feel?</label>
+    <input name="feeling" id="feeling" value="{{ request.form['feeling'] }}" required>
     <input type="submit" value="Save">
   </form>
 {% endblock %}
